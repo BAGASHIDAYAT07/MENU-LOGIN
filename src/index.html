@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu login</title>
+  </head>
+  <style>
+    button {
+      background: none;
+      color: #ffffff;
+      transition: 0.3s ease;
+      font-weight: 700;
+    }
+    button:hover {
+      background-color: #ffffff;
+      color: #000000;
+      font-weight: 700;
+    }
+  </style>
+  <body
+    style="
+      height: 100dvh;
+      display: flex;
+      background-image: url('../2.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, Helvetica, sans-serif;
+      background-attachment: fixed;
+    "
+  >
+    <button
+      onclick="ubah()"
+      style="
+        border-radius: 100px;
+        border: 1px solid rgb(255, 255, 255);
+        cursor: pointer;
+        font-size: 15px;
+        height: 50px;
+        width: 100px;
+      "
+      type="submit"
+    >
+      Bg-R
+    </button>
+
+    <form
+      action=""
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 20rem;
+        margin: auto;
+        border: 1px solid rgb(255, 255, 255);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(5px);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 5);
+      "
+      method="post"
+    >
+      <h1 style="text-align: center; color: #ffffff">Login</h1>
+
+      <label for="" style="color: #ffffff">Email</label>
+      <input
+        type="email"
+        style="
+          background: none;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #ffffff;
+          padding: 3px 10px;
+          color: #ffffff;
+        "
+        name="email"
+        required
+      />
+
+      <label for="" style="color: #ffffff">password</label>
+      <input
+        type="password"
+        style="
+          background: none;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #ffffff;
+          padding: 3px 10px;
+          color: #ffffff;
+        "
+        name="password"
+        required
+      />
+
+      <button
+        style="
+          border-radius: 100px;
+          border: 1px solid rgb(255, 255, 255);
+          padding: 13px 0px;
+          margin-top: 20px;
+          cursor: pointer;
+          font-size: 15px;
+        "
+        type="submit"
+      >
+        Login
+      </button>
+    </form>
+
+    <script>
+      const gambar = ["../2.jpg", "../3.jpg", "../4.jpg", "../5.jpeg"];
+      let index = 0;
+      function ubah() {
+        document.body.style.backgroundImage = `url('${gambar[index]}')`;
+        index++;
+        if (index >= gambar.length) {
+          index = 0;
+        }
+      }
+    </script>
+  </body>
+</html>
